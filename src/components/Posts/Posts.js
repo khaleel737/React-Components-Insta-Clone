@@ -10,7 +10,11 @@ console.log(posts);
     <div className='posts-container-wrapper'>
             {/* Map through the posts array returning a Post component at each iteration */}
 
-            { posts.map(pst => <Post post={pst} key={pst.id} /> )}
+            { posts.map(pst => {
+              return <Post post={pst} likePost={likePost} key={pst.id} />
+            })}
+            {/* {likePost.map(lks => <likePost likePost={lks} key={lks.id}/> )} */}
+            
       
     
       {/* Check the implementation of Post to see what props it requires! */}
